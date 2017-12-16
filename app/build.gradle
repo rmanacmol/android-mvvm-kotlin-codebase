@@ -22,17 +22,17 @@ android {
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    resValue "string", "base_service_url", "https://jsonplaceholder.typicode.com"
+    resValue "string", "base_service_url", "https://www.carmudi.co.id/"
   }
   flavorDimensions "staging"
   productFlavors {
     staging {
       dimension "staging"
-      resValue "string", "base_service_url", "https://jsonplaceholder.typicode.com"
+      resValue "string", "base_service_url", "https://www.carmudi.co.id/"
     }
     local {
       dimension "staging"
-      resValue "string", "base_service_url", "https://jsonplaceholder.typicode.com"
+      resValue "string", "base_service_url", "https://www.carmudi.co.id/"
     }
   }
   buildTypes {
@@ -64,6 +64,7 @@ dependencies {
   implementation 'com.squareup.retrofit2:retrofit:2.3.0'
   implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
   implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+  implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
   // OkHttp
   implementation 'com.squareup.okhttp3:okhttp:3.8.1'
   implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'

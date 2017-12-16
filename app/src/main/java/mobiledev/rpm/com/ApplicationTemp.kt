@@ -1,9 +1,10 @@
 package mobiledev.rpm.com
 
 import android.support.multidex.MultiDexApplication
+import timber.log.Timber
 
 /**
- * Created by RenzManacmol on 12/15/2017.
+ * Created by RenzManacmol
  */
 
 class ApplicationTemp : MultiDexApplication() {
@@ -13,5 +14,11 @@ class ApplicationTemp : MultiDexApplication() {
   override fun onCreate() {
     super.onCreate()
     this.component = DaggerApplicationComponent.builder().applicationModule(ApplicationModule(this)).build()
+    //initialize timber
+    Timber.plant(object : Timber.DebugTree() {
+      override fun createStackElementTag(element: StackTraceElement): String? {
+        return super.createStackElementTag(element) + ":" + element.lineNumber
+      }
+    })
   }
 }

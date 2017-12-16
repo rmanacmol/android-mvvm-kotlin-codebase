@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 /**
- * Created by RenzManacmol on 12/15/2017.
+ * Created by RenzManacmol
  */
 
 @Module
@@ -58,4 +58,9 @@ class ApplicationModule(private val mApplication: Application) {
       .build()
   }
 
+  @Provides
+  @Singleton
+  fun providesApiService(retrofit: Retrofit): ApiService {
+    return retrofit.create(ApiService::class.java)
+  }
 }
