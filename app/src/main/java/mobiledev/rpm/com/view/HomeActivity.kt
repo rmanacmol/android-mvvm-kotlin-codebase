@@ -20,11 +20,7 @@ class HomeActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
     mViewModel = HomeViewModel(application as ApplicationTemp)
 
-    tvClick.setOnClickListener({ v -> mViewModel!!.onClickMethod() })
-
-
-
-
+    tvClick.setOnClickListener({ _ -> mViewModel!!.onClickMethod() })
 
   }
 }
