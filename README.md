@@ -1,17 +1,21 @@
 # android-template4
 
-This android project is made with 100% kotlin :) 
+This android project is made with 100% Kotlin :) 
 with the help of the following third-party libraries and data binding 
 as support for MVVM pattern.
 
 https://developer.android.com/topic/libraries/data-binding/index.html
 
 Dagger2
+
 https://github.com/google/dagger
 
 Retrofit2 + OkHttp + RxJava + RxAndroid
+
 http://square.github.io/retrofit/
+
 http://square.github.io/okhttp/
+
 https://github.com/ReactiveX/RxJava
 
 
