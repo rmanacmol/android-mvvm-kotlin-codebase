@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools">
 
   <data>
+
+    <import type="android.view.View" />
 
     <variable
       name="viewModel"
@@ -11,38 +12,39 @@
 
   </data>
 
-  <LinearLayout
+  <android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-      android:id="@+id/swipeRefreshLayout"
+    <android.support.constraint.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
-      <RelativeLayout
+      <TextView
+        android:id="@+id/tv_empty_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Empty List"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp"
+        android:visibility="@{viewModel.results.size()>0?View.GONE:View.VISIBLE}"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:listitem="@layout/item_row" />
 
-        <android.support.v7.widget.RecyclerView
-          android:id="@+id/rv"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:layout_above="@+id/item_progress_bar"
-          tools:listitem="@layout/item_row" />
-
-        <ProgressBar
-          android:id="@+id/item_progress_bar"
-          android:layout_width="40dp"
-          android:layout_height="40dp"
-          android:layout_alignParentBottom="true"
-          android:layout_centerHorizontal="true"
-          android:visibility="gone" />
-
-      </RelativeLayout>
-    </android.support.v4.widget.SwipeRefreshLayout>
-
-  </LinearLayout>
-
+    </android.support.constraint.ConstraintLayout>
+  </android.support.v4.widget.SwipeRefreshLayout>
 </layout>

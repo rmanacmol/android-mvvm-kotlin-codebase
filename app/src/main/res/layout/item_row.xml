@@ -40,7 +40,7 @@
 
         <TextView
           android:id="@+id/tvProductName"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_margin="4dp"
           android:ellipsize="end"
@@ -51,7 +51,7 @@
 
         <TextView
           android:id="@+id/tvProductBrand"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_margin="4dp"
           android:ellipsize="end"
@@ -62,7 +62,7 @@
 
         <TextView
           android:id="@+id/tvProductPrice"
-          android:layout_width="wrap_content"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="end"
           android:layout_margin="8dp"
