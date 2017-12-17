@@ -35,7 +35,6 @@ class HomeActivity : AppCompatActivity() {
   }
 
   fun initRecycerview() {
-
     mProductAdapter = ProductAdapter()
     mBinding?.rv?.adapter = mProductAdapter
     mBinding?.rv?.layoutManager = LinearLayoutManager(this)

@@ -16,7 +16,7 @@ import timber.log.Timber
  */
 class HomeViewModel(application: ApplicationTemp, activity: HomeActivity) : BaseViewModel(application) {
 
-  var activty : HomeActivity
+  var activty: HomeActivity
   var disposable: Disposable? = null
   var results = ObservableField<MutableList<Results>>()
   var loading = ObservableBoolean()
@@ -43,7 +43,7 @@ class HomeViewModel(application: ApplicationTemp, activity: HomeActivity) : Base
     return this.results.get()
   }
 
-  fun fetchData(page : Int) {
+  fun fetchData(page: Int) {
     setLoading(true)
     disposable = apiservice.getProduct(page, 10, "newest")
       .subscribeOn(Schedulers.io())
