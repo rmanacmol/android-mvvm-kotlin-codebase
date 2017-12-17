@@ -1,4 +1,4 @@
-# Android Codebase Kotlin
+# Android Codebase - Kotlin
 
 This android project is made with 100% Kotlin :) 
 with the help of the following third-party libraries and data binding 
