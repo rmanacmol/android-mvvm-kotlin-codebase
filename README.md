@@ -20,9 +20,6 @@ http://square.github.io/okhttp/
 https://github.com/ReactiveX/RxJava
 
 
-![425960_4271900968450_325033986_n](https://cloud.githubusercontent.com/assets/10010236/19834562/7aca80c8-9e9f-11e6-96c5-36a7db70f8cd.jpg)
-
-
 # License
 
 Copyright 2017 Renz Manacmol
